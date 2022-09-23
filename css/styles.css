@@ -349,7 +349,7 @@ html {
   flex-wrap: wrap;
   gap: 30px;
   list-style: none;
-  border: 1px solid var(--project-border);
+  
 }
 .project-list .link {
   text-decoration: none;
@@ -357,7 +357,9 @@ html {
 
 .card-part {
   padding: 20px 24px;
-  
+  border-right: 1px solid var(--project-border);
+    border-bottom: 1px solid var(--project-border);
+    border-left: 1px solid var(--project-border);
 }
 /* -------------------Filters-------------------- */
 .button-list {
