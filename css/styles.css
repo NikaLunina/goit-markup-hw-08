@@ -6,9 +6,9 @@
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --logo-black-part: #000000;
-  --header-line:#ececec;
-  --project-border:#EEEEEE; 
-  --social-icon:#AFB1B8;
+  --header-line: #ececec;
+  --project-border: #eeeeee;
+  --social-icon: #afb1b8;
 }
 
 body {
@@ -28,6 +28,7 @@ p {
 ul {
   margin: 0;
   padding-left: 0;
+  list-style: none;
 }
 
 img {
@@ -50,8 +51,7 @@ html {
 }
 
 *,
-*::before
-*::after {
+*::before *::after {
   box-sizing: inherit;
 }
 
@@ -61,7 +61,7 @@ html {
   align-items: center;
 }
 .header {
-  border-bottom: 1px solid var(--header-line)
+  border-bottom: 1px solid var(--header-line);
 }
 
 /*-----------------Logo-----------------------*/
@@ -144,14 +144,10 @@ html {
   color: var(--accent-color);
 }
 
-
-.header-icon{
-  box-sizing: border-box;
+.header-icon {
   fill: currentColor;
   margin-right: 10px;
   margin-bottom: 0;
-  display: flex;
-
 }
 /* --------------Hero---------------------------- */
 .hero {
@@ -163,15 +159,16 @@ html {
   text-align: center;
 }
 
-.hero{
-  background-image:linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-  ), url(../images/hero-bg.jpg);
+.hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
+  max-width: 1600px;
 }
 .hero-title {
   margin-left: auto;
@@ -270,8 +267,34 @@ html {
   padding-top: 0;
   padding-bottom: 94px;
 }
+.feature-list .item::before {
+  content: "";
 
+  height: 120px;
+  display: block;
+  background-color: var(--secondary-background-color);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 
+.item.antena::before {
+  background-image: url(../images/icons-svg/antenna.svg);
+}
+
+.item.clock::before {
+  background-image: url(../images/icons-svg/clock.svg);
+}
+
+.item.diagram::before {
+  background-image: url(../images/icons-svg/diagram.svg);
+}
+
+.item.astronaut::before {
+  background-image: url(../images/icons-svg/astronaut.svg);
+}
 
 /* --------------What-we-are-doing---------------- */
 .box-list {
@@ -300,7 +323,7 @@ html {
 }
 
 .team-list .title {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -309,12 +332,12 @@ margin-bottom: 10px;
 
 .team-list .text {
   margin-bottom: 16px;
- color: var(--title-text-color);
+  color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.19;
 }
 
-.team-part{
+.team-part {
   padding: 30px 0;
 }
 .team-soc-list {
@@ -324,50 +347,52 @@ margin-bottom: 10px;
   list-style: none;
 }
 
-
-.team-soc-link{
+.team-soc-link {
   display: flex;
   width: 44px;
   height: 44px;
-  
+
   border-radius: 50%;
   align-items: center;
   justify-content: center;
-fill:var(--social-icon);
+  fill: var(--social-icon);
 }
 
 .team-soc-link:hover,
-.team-soc-link:focus{
+.team-soc-link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
-} 
-
-
-/* .team-soc-icon{
-  fill:currentColor;
-}
-.team-soc-link:hover,
-.team-soc-link:focus{
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-} */
-
-
-
-/* .team-soc-link:hover,
-.team-soc-link:focus{
-  background-color: var(--accent-color);
 }
 
-.team-soc-link:hover .team-soc-icon,
-.team-soc-link:focus .team-soc-icon{
-  fill: var(--primary-white-color);
-}  */
+/* ---------------------Clients------------------- */
+.clients-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--social-icon);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  fill: var(--social-icon);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
 /* ----------------------Footer------------------- */
 .contacts-footer {
   list-style: none;
   font-style: normal;
-  
 }
 .footer {
   padding-top: 60px;
@@ -396,16 +421,62 @@ fill:var(--social-icon);
   color: var(--accent-color);
 }
 
-.contacts-footer .item:not(:last-child){
+.contacts-footer .item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-address{
+address {
   margin-top: 20px;
 }
 
+.footer-content {
+  display: flex;
+}
 
-/* --------------------Projects--------------------- */
+.footer-adress-content {
+  display: block;
+}
+
+.footer-soc-content {
+  display: block;
+  margin-left: 70px;
+}
+
+.foorer-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer-soc-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  fill: var(--primary-white-color);
+}
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-soc-title {
+  font-weight: 700;
+
+  line-height: 16px;
+
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+
+  margin-bottom: 15px;
+  padding-top: 12px;
+}
+
+/* ------------------Projects--------------------- */
 
 .project-list .title {
   margin-bottom: 4px;
@@ -433,11 +504,17 @@ address{
   text-decoration: none;
 }
 
+.project-list .item:hover,
+.project-list .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .card-part {
   padding: 20px 24px;
   border-right: 1px solid var(--project-border);
-    border-bottom: 1px solid var(--project-border);
-    border-left: 1px solid var(--project-border);
+  border-bottom: 1px solid var(--project-border);
+  border-left: 1px solid var(--project-border);
 }
 /* -------------------Filters-------------------- */
 .button-list {
@@ -475,5 +552,4 @@ address{
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  
 }
