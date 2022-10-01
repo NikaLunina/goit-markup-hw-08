@@ -497,6 +497,7 @@ address {
   list-style: none;
 }
 .project-list .link {
+  display: block;
   text-decoration: none;
   
 }
