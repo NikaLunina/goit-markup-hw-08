@@ -133,6 +133,7 @@ html {
 
 .contacts-header .link {
   display: flex;
+  align-items: center;
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -169,6 +170,8 @@ html {
   background-position: center;
   background-size: cover;
   max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-title {
   margin-left: auto;
@@ -427,6 +430,7 @@ address {
 
 .footer-content {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-adress-content {
@@ -469,7 +473,7 @@ address {
   color: var(--primary-white-color);
 
   margin-bottom: 15px;
-  padding-top: 12px;
+
 }
 
 /* ------------------Projects--------------------- */
