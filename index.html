@@ -53,7 +53,7 @@
       <section class="hero">
         <div class="container">
          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="button">Замовити послугу</button>
+        <button type="button" class="button" data-modal-open>Замовити послугу</button>
         
       </div>
       
@@ -383,28 +383,28 @@
         <ul class="foorer-soc-list">
           <li class="footer-item">
             <a class="footer-soc-link" href="">
-              <svg class="footer-soc-icon" whidth="20" height="20">
+              <svg class="footer-soc-icon" width="20" height="20">
                 <use href="./images/symbol-defs.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="footer-item">
             <a class="footer-soc-link" href="">
-              <svg class="footer-soc-icon" whidth="20" height="20">
+              <svg class="footer-soc-icon" width="20" height="20">
                 <use href="./images/symbol-defs.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="footer-item">
             <a class="footer-soc-link" href="">
-              <svg class="footer-soc-icon" whidth="20" height="20">
+              <svg class="footer-soc-icon" width="20" height="20">
                 <use href="./images/symbol-defs.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="footer-item">
             <a class="footer-soc-link" href="">
-              <svg class="footer-soc-icon" whidth="20" height="20">
+              <svg class="footer-soc-icon" width="20" height="20">
                 <use href="./images/symbol-defs.svg#icon-linkedin"></use>
               </svg>
             </a>
@@ -414,14 +414,15 @@
       </div>
     </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-button">
-          <svg class="modal-icon" whidth="11" height="11">
+        <button class="modal-button" data-modal-close>
+          <svg class="modal-icon" width="11" height="11">
             <use href="./images/symbol-defs.svg#icon-Vector"></use>
           </svg>
         </button>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
