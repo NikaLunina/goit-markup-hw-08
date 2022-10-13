@@ -231,6 +231,11 @@ html {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
+
+
+
+/* -------------------Modal---------------------------- */
 .backdrop {
   position: fixed;
   top: 0;
@@ -287,6 +292,118 @@ html {
   justify-content: center;
   cursor: pointer;
 }
+
+.form-title{
+  font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
+color: #212121;
+
+margin-bottom: 30px;
+
+}
+
+
+.modal-form{
+ 
+width: 448px;
+  padding:40px 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-field{
+
+display: block;
+flex-direction: column;
+margin-bottom: 10px;
+  position: relative;
+
+           
+           
+}
+
+.form-input{
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 11px 12px;
+  width: 100%;
+  outline: none;
+  padding-left: 50px;
+}
+
+.form-input:focus,
+.form-input:hover {
+border-color: var(--accent-color);
+
+}
+.form-input:focus + .modal-form-icon,
+.form-input:hover + .modal-form-icon
+{
+  fill: var(--accent-color);
+}
+
+
+ .form-label{
+  margin-bottom: 4px;
+  font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.01em;
+color: #757575;
+
+
+}
+.form-comment{
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  height: 120px;
+  width: 100%;
+}
+
+.form-field textarea{
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+resize: none;
+}
+
+.form-btn{
+  display: flex;
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+ 
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 52px;
+  min-width: 216px;
+  border: 1px transparent;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  
+}
+
+.modal-form-icon{
+ 
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  fill:var(--primary-text-color);
+  
+}
+
 
 /* ----------------Section-title------------------ */
 .section-title {
@@ -574,6 +691,67 @@ address {
   margin-bottom: 15px;
 }
 
+.footer-subscrible{
+  display: block;
+  margin-left: auto;
+  width: 570px;
+}
+
+.sub-form input::placeholder{
+  font-size: 16px;
+line-height: 1.25;
+color: rgba(255, 255, 255, 0.6);
+padding-left: 16px;
+}
+
+
+
+
+.sub-input{
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+background-color: var(--footer-background-color);
+}
+
+.sub-btn{
+  display: flex;
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+align-items: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 28px;
+  min-width: 216px;
+  border: 1px transparent;
+margin: 0;
+ 
+  justify-content: center;
+}
+
+.send-icon{
+  margin-left: 10px;
+  align-items: center;
+}
+
+.sub-form{
+  display: flex;
+  position: relative;
+
+justify-content: space-between;
+gap: 12px;
+}
 /* ------------------Projects--------------------- */
 
 .project-list .title {
