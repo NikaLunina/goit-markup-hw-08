@@ -269,6 +269,7 @@ html {
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px
 }
 .modal-button {
   display: flex;
@@ -306,9 +307,7 @@ html {
 
 .modal-form {
   width: 448px;
-  padding: 40px 0;
-  margin-right: auto;
-  margin-left: auto;
+
 }
 
 .form-field {
@@ -316,6 +315,7 @@ html {
   flex-direction: column;
 
   position: relative;
+margin-bottom: 10px;;
 }
 
 .form-input {
@@ -326,7 +326,7 @@ html {
   outline: none;
   padding-left: 50px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 10px;
+
 }
 
 .form-field:focus-within > .modal-form-icon {
@@ -342,6 +342,7 @@ html {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
+  margin-bottom: 4px;
 }
 .form-comment {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -407,7 +408,7 @@ html {
 
 .modal-form-icon {
   position: absolute;
-  top: 11px;
+ bottom: 11px;
   left: 12px;
   fill: var(--primary-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
