@@ -1,12 +1,13 @@
 .clients{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
   }
   
   .clients__link {
     display: flex;
-    width: 170px;
+    
     height: 92px;
   
     border: 1px solid var(--social-icon);
@@ -23,4 +24,16 @@
       }
   }
   
- 
+ .clients__item{
+  @media screen and (min-width: 480px){
+    width: calc((100% - 30px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  width: calc((100% - 60px) / 3);
+}
+
+@media screen and (min-width: 1200px) {
+  width: calc((100% - 150px) / 6);
+}
+ }
