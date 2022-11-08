@@ -16,7 +16,7 @@
 /*-----------------Logo-----------------------*/
 
 .logo {
-  display: flex;
+  display: block;
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -33,6 +33,7 @@
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.2;
+    
   }
 }
 
@@ -138,6 +139,7 @@
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.14;
+   
   }
 }
 
@@ -149,6 +151,31 @@
     margin-right: 10px;
   }
 }
+.contacts-header__link.mail{
+  @media screen and (min-width: 768px) {
+  padding-top: 20px;
+  padding-bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts-header__link.phone{
+  @media screen and (min-width: 768px) {
+    padding-bottom: 20px;
+    padding-top: 0;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+}
+
+/*----------------Menu------------------------*/
 
 .menu-open-btn {
   display: flex;
@@ -165,11 +192,19 @@
 }
 .mob-menu {
   position: fixed;
-  top: 0;
+ top: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
   z-index: 1;
+  
 }
 .menu-close-btn {
   display: flex;
@@ -194,10 +229,9 @@
 .mob-menu__list {
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
-  margin-top: 48px;
+ 
   gap: 32px;
-  margin-bottom: 306px;
+
 }
 
 .mob-menu__link {
@@ -218,10 +252,12 @@
   }
 }
 
+
+
 .contacts-menu__list {
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
+
   gap: 32px;
   margin-bottom: 64px;
 }
@@ -232,6 +268,7 @@
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  text-decoration: none;
 }
 .contacts-mail__link {
   font-weight: 500;
@@ -239,11 +276,13 @@
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  text-decoration: none;
 }
 
 .menu-social {
-  margin-left: 30px;
+
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   list-style: none;
@@ -251,6 +290,12 @@
 .menu-social__item {
   padding: 0 10px;
   border-right: 1px solid var(--title-text-color);
+}
+.menu-social__item:last-child {
+  border-right:none
+}
+.menu-social__item:first-child {
+  padding-left: 0;
 }
 .menu-social__link {
   display: flex;
